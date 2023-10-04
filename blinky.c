@@ -24,10 +24,6 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-//#include "inc/hw_memmap.h"
-//#include "driverlib/debug.h"
-//#include "driverlib/gpio.h"
-//#include "driverlib/sysctl.h"
 
 #include "HwSupport.h"
 
@@ -73,11 +69,11 @@ int main(void)
     ledColors greenColor = GREEN;
     ledColors blueColor = BLUE;
     ledColors redColor = RED;
-
+    HwInit();
     while(1)
     {
 
-        HwInit();
+
         HwTurnOnLED(greenColor);
         waitFor(200000);
         HwTurnLedOff(greenColor);
